@@ -3,7 +3,10 @@ package br.com.gabriellibano.myage
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -26,3 +29,21 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
+@Preview(showSystemUi = true)
+fun CounterScreen() {
+    Column() {
+        Text(text = "How old are you?")
+        Text(text = "Press the buttons to get your age")
+        Text(text = "20")
+
+        Row() {
+            Button(onClick = {}) {
+                Text(text = "-")
+            }
+            Button(onClick = {}) {
+                Text(text = "+")
+            }
+        }
+    }
+}
